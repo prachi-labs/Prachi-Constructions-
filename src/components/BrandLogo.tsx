@@ -5,33 +5,31 @@ interface BrandLogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   showText?: boolean;
-  monochrome?: boolean;
 }
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = '',
   size = 'md',
   showText = true,
-  monochrome = false,
 }) => {
   const sizeMap = {
-    sm: { box: 36, text: 'text-sm' },
-    md: { box: 48, text: 'text-base' },
-    lg: { box: 64, text: 'text-lg' },
-    xl: { box: 88, text: 'text-xl' },
+    sm: 42,
+    md: 64,
+    lg: 80,
+    xl: 104,
   };
 
   const currentSize = sizeMap[size];
 
   return (
     <div className={`flex items-center gap-3.5 select-none ${className}`}>
-      
+
       {/* Official Company Logo */}
       <div
         className="relative flex items-center justify-center shrink-0 transition-transform duration-300 hover:scale-105"
         style={{
-          width: currentSize.box,
-          height: currentSize.box,
+          width: currentSize,
+          height: currentSize,
         }}
       >
         <img
@@ -41,7 +39,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         />
       </div>
 
-      {/* Brand Text Lockup for Topbar / Hero / Footer */}
+      {/* Brand Text Lockup */}
       {showText && (
         <div className="flex flex-col">
           <span className="font-cinzel text-base md:text-lg font-semibold tracking-wider text-white flex items-center gap-1.5">

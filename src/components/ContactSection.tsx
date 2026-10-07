@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrandLogo } from './BrandLogo';
-import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, ArrowRight, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
 
 interface ContactSectionProps {
   prefilledType?: string;
@@ -118,7 +118,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div>
                   <div className="text-xs font-bold text-white">Direct Phone Consultation</div>
                   <div className="text-xs text-[#C0C9DB] font-mono mt-0.5 font-bold">
-                    +91 94141 23456 / +91 98290 87654
+                    +91 9214321354
                   </div>
                   <div className="text-[11px] text-[#9DACCC] mt-0.5 font-medium">
                     Direct line to project engineering team
@@ -131,7 +131,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 <div>
                   <div className="text-xs font-bold text-white">Official Correspondence</div>
                   <div className="text-xs text-[#C0C9DB] font-sans-clean mt-0.5 font-medium">
-                    prachiikumawat246@gmail.com
+                    pankajkota0@gmail.com 
                   </div>
                   <div className="text-[11px] text-[#9DACCC] mt-0.5 font-medium">
                     Tender inquiries & project proposals

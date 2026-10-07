@@ -121,7 +121,7 @@ export const AboutSection: React.FC<AboutProps> = ({ onContactClick }) => {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Mail className="w-3.5 h-3.5 text-[#C0C9DB] shrink-0" />
-                  <span>prachiikumawat246@gmail.com</span>
+                  <span>pankajkota0@gmail.com</span>
                 </div>
               </div>
 

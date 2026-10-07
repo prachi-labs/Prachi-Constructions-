@@ -338,7 +338,7 @@ export const HeroTransformation: React.FC<HeroProps> = ({
               onClick={onExploreProjects}
               className="px-4 py-2 rounded-full bg-[#121524]/90 hover:bg-[#1c2237] border border-[#485F88]/70 text-xs font-bold text-[#C0C9DB] hover:text-white flex items-center gap-2 cursor-pointer shadow-lg transition-all"
             >
-              <span>View All 9 Projects</span>
+              <span>View All 10 Projects</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
 

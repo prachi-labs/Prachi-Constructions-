@@ -42,13 +42,13 @@ export const PROJECTS_DATA: ProjectData[] = [
     ],
   },
   {
-    id: 'ganpati-flats',
-    name: 'Ganpati Flats',
+    id: 'lakshya-towers',
+    name: 'LAKSHYA TOWERS',
     location: 'Ek Number Road, Kota',
     category: 'residential',
     status: 'completed',
     shortDesc: 'Landmark residential apartment complex situated on prime Ek Number Road with spacious floor layouts and resilient concrete construction.',
-    fullDesc: 'Located on Ek Number Road, Ganpati Flats represents a benchmark in urban residential housing in Kota. Built with attention to structural longevity, natural cross-ventilation, and durable finishings that have stood the test of time.',
+    fullDesc: 'Located on Ek Number Road, LAKSHYA TOWERS represents a benchmark in urban residential housing in Kota. Built with attention to structural longevity, natural cross-ventilation, and durable finishings that have stood the test of time.',
     image: stage3Img,
     scope: [
       'Turnkey civil structural framework',

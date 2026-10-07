@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #C0C9DB;
+    background-color: #121524;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-garamond {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121524;
+}
+::-webkit-scrollbar-thumb {
+  background: #384C65;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #485F88;
+}
+
+/* Glass and architectural highlights */
+.architectural-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(157, 172, 204, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(157, 172, 204, 0.06) 1px, transparent 1px);
+}
+
+.blueprint-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(157, 172, 204, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(157, 172, 204, 0.05) 1px, transparent 1px);
+}

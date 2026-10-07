@@ -16,7 +16,7 @@ export const ExpertiseSection: React.FC<ExpertiseProps> = ({ onSelectCategory })
       icon: Home,
       description:
         'Turnkey execution of contemporary private villas, bungalows, kothis, and multi-story apartment complexes across Kota. We engineer private spaces with structural precision, earthquake-resistant frames, and fine architectural finishes.',
-      metrics: 'Delivered Ganpati Flats, Sukhmani, Fortune Elita',
+      metrics: 'Delivered LAKSHYA TOWERS, Sukhmani, Fortune Elita',
       capabilities: [
         'Luxury Private Kothis & Custom Villas',
         'Multi-Story Residential Apartments',
@@ -102,21 +102,30 @@ export const ExpertiseSection: React.FC<ExpertiseProps> = ({ onSelectCategory })
   ];
 
   return (
-    <section id="expertise" className="relative bg-[#121524] py-24 px-6 md:px-12 border-b border-[#384C65]/80">
+    <section
+      id="expertise"
+      className="relative bg-[#121524] py-24 px-6 md:px-12 border-b border-[#384C65]/80"
+    >
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="max-w-2xl">
             <span className="text-[11px] uppercase tracking-[0.25em] text-[#C0C9DB] font-bold block mb-3">
               Comprehensive Construction Disciplines
             </span>
+
             <h2 className="font-cinzel text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Our Core <span className="text-[#C0C9DB] italic font-garamond font-normal">Expertise</span>
+              Our Core{' '}
+              <span className="text-[#C0C9DB] italic font-garamond font-normal">
+                Expertise
+              </span>
             </h2>
           </div>
+
           <p className="text-[#9DACCC] text-sm max-w-md font-sans-clean font-medium">
-            From preliminary groundwork to turnkey handover, we offer full-spectrum civil engineering and project execution.
+            From preliminary groundwork to turnkey handover, we offer full-spectrum
+            civil engineering and project execution.
           </p>
         </div>
 
@@ -142,6 +151,7 @@ export const ExpertiseSection: React.FC<ExpertiseProps> = ({ onSelectCategory })
                     <div className="w-12 h-12 rounded-xl bg-[#202742] border border-[#384C65] flex items-center justify-center text-[#C0C9DB] group-hover:bg-gradient-to-r group-hover:from-[#384C65] group-hover:to-[#485F88] group-hover:text-white transition-all">
                       <Icon className="w-6 h-6" />
                     </div>
+
                     <span className="font-mono text-xs text-[#9DACCC] group-hover:text-[#C0C9DB] tracking-widest transition-colors font-bold">
                       0{index + 1}
                     </span>
@@ -151,6 +161,7 @@ export const ExpertiseSection: React.FC<ExpertiseProps> = ({ onSelectCategory })
                   <h3 className="font-cinzel text-xl font-bold text-white mb-1 group-hover:text-[#C0C9DB] transition-colors">
                     {item.title}
                   </h3>
+
                   <div className="text-xs text-[#9DACCC] font-bold font-sans-clean mb-4">
                     {item.tagline}
                   </div>
@@ -162,7 +173,10 @@ export const ExpertiseSection: React.FC<ExpertiseProps> = ({ onSelectCategory })
                   {/* Capability List */}
                   <div className="space-y-2 mb-6 pt-4 border-t border-[#384C65]/60">
                     {item.capabilities.map((cap, cIdx) => (
-                      <div key={cIdx} className="flex items-center gap-2 text-xs text-[#C0C9DB] font-medium">
+                      <div
+                        key={cIdx}
+                        className="flex items-center gap-2 text-xs text-[#C0C9DB] font-medium"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#485F88]" />
                         <span>{cap}</span>
                       </div>
@@ -175,6 +189,7 @@ export const ExpertiseSection: React.FC<ExpertiseProps> = ({ onSelectCategory })
                   <span className="text-[11px] text-[#9DACCC] font-sans-clean font-medium">
                     {item.metrics}
                   </span>
+
                   <button
                     onClick={() => onSelectCategory(item.id)}
                     className="text-xs font-bold text-[#C0C9DB] hover:text-white flex items-center gap-1 cursor-pointer transition-colors"

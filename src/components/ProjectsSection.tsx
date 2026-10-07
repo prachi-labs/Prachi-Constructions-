@@ -84,28 +84,28 @@ export const PROJECTS_DATA: ProjectData[] = [
       { label: 'Use Case', value: 'Commercial Retail Hub' },
     ],
   },
- {
-  id: 'west-side-kota',
-  name: 'West Side Kota',
-  location: 'Kota, Rajasthan',
-  category: 'commercial',
-  status: 'completed',
-  shortDesc: 'Commercial retail fashion and lifestyle store designed for a modern and engaging shopping experience.',
-  fullDesc: 'West Side Kota is a commercial retail fashion and lifestyle store developed with a focus on modern retail functionality, quality civil execution, and a customer-oriented shopping environment.',
-  image: commercialImg,
-  scope: [
-    'Commercial civil structural execution',
-    'Retail space development',
-    'Electrical and plumbing infrastructure',
-    'Interior finishing and retail frontage works',
-  ],
-  specs: [
-    { label: 'Project Type', value: 'Fashion & Lifestyle Retail Store' },
-    { label: 'Location', value: 'Kota, Rajasthan' },
-    { label: 'Status', value: 'Completed & Delivered' },
-  ],
-},
-{
+  {
+    id: 'west-side-kota',
+    name: 'West Side Kota',
+    location: 'Kota, Rajasthan',
+    category: 'commercial',
+    status: 'completed',
+    shortDesc: 'Commercial retail fashion and lifestyle store designed for a modern and engaging shopping experience.',
+    fullDesc: 'West Side Kota is a commercial retail fashion and lifestyle store developed with a focus on modern retail functionality, quality civil execution, and a customer-oriented shopping environment.',
+    image: commercialImg,
+    scope: [
+      'Commercial civil structural execution',
+      'Retail space development',
+      'Electrical and plumbing infrastructure',
+      'Interior finishing and retail frontage works',
+    ],
+    specs: [
+      { label: 'Project Type', value: 'Fashion & Lifestyle Retail Store' },
+      { label: 'Location', value: 'Kota, Rajasthan' },
+      { label: 'Status', value: 'Completed & Delivered' },
+    ],
+  },
+  {
     id: 'sukhmani-apartment',
     name: 'Sukhmani Apartment',
     location: 'Bajrang Nagar, Kota',
@@ -298,8 +298,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           <div className="flex items-center gap-1.5 p-1.5 bg-[#181d31] rounded-xl border border-[#384C65] self-start md:self-auto overflow-x-auto max-w-full shadow-sm">
             {[
               { id: 'all', label: 'All Projects', count: PROJECTS_DATA.length },
-              { id: 'residential', label: 'Residential', count: 5 },
-              { id: 'commercial', label: 'Commercial', count: 4 },
+              { id: 'residential', label: 'Residential', count: 6 },
+              { id: 'commercial', label: 'Commercial', count: 3 },
               { id: 'institutional', label: 'Institutional', count: 1 },
             ].map((tab) => (
               <button

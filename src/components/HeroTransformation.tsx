@@ -184,7 +184,7 @@ export const HeroTransformation: React.FC<HeroProps> = ({
         </div>
 
         {/* TOP STATUS TICKER: Progress Tracker Bar */}
-        <div className="relative z-20 pt-20 px-6 md:px-12 max-w-7xl mx-auto w-full flex items-center justify-between">
+       <div className="relative z-20 pt-28 px-6 md:px-12 max-w-7xl mx-auto w-full flex items-center justify-between">
           <div className="flex items-center gap-3 bg-[#121524]/90 px-3.5 py-1.5 rounded-full border border-[#384C65] shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#485F88] animate-pulse" />
             <span className="text-[11px] uppercase tracking-[0.2em] font-sans-clean text-[#C0C9DB] font-semibold">

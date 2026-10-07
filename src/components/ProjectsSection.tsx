@@ -84,7 +84,28 @@ export const PROJECTS_DATA: ProjectData[] = [
       { label: 'Use Case', value: 'Commercial Retail Hub' },
     ],
   },
-  {
+ {
+  id: 'west-side-kota',
+  name: 'West Side Kota',
+  location: 'Kota, Rajasthan',
+  category: 'commercial',
+  status: 'completed',
+  shortDesc: 'Commercial retail fashion and lifestyle store designed for a modern and engaging shopping experience.',
+  fullDesc: 'West Side Kota is a commercial retail fashion and lifestyle store developed with a focus on modern retail functionality, quality civil execution, and a customer-oriented shopping environment.',
+  image: commercialImg,
+  scope: [
+    'Commercial civil structural execution',
+    'Retail space development',
+    'Electrical and plumbing infrastructure',
+    'Interior finishing and retail frontage works',
+  ],
+  specs: [
+    { label: 'Project Type', value: 'Fashion & Lifestyle Retail Store' },
+    { label: 'Location', value: 'Kota, Rajasthan' },
+    { label: 'Status', value: 'Completed & Delivered' },
+  ],
+},
+{
     id: 'sukhmani-apartment',
     name: 'Sukhmani Apartment',
     location: 'Bajrang Nagar, Kota',
@@ -269,7 +290,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               Built Through <span className="text-[#C0C9DB] italic font-garamond font-normal">Experience</span>
             </h2>
             <p className="text-[#C0C9DB] text-sm mt-2 font-medium font-sans-clean">
-              All 9 premier executed and active construction projects in Kota & Rajasthan. Click any project card to inspect civil specifications, structural scope, and engineering details.
+              All 10 premier executed and active construction projects in Kota & Rajasthan. Click any project card to inspect civil specifications, structural scope, and engineering details.
             </p>
           </div>
 
@@ -278,7 +299,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             {[
               { id: 'all', label: 'All Projects', count: PROJECTS_DATA.length },
               { id: 'residential', label: 'Residential', count: 5 },
-              { id: 'commercial', label: 'Commercial', count: 3 },
+              { id: 'commercial', label: 'Commercial', count: 4 },
               { id: 'institutional', label: 'Institutional', count: 1 },
             ].map((tab) => (
               <button
@@ -311,7 +332,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               onClick={resetAllFilters}
               className="text-xs font-bold text-[#C0C9DB] hover:text-white underline cursor-pointer"
             >
-              Show All 9 Projects
+              Show All 10 Projects
             </button>
           </div>
         )}

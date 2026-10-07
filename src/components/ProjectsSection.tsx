@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { ProjectData, ProjectDetailModal } from './ProjectDetailModal';
-import { MapPin, ArrowUpRight, CheckCircle2, Clock, Sparkles } from 'lucide-react';
+import { MapPin, ArrowUpRight, Sparkles } from 'lucide-react';
 
 // Import our verified generated images
-import urbanHeightsImg from '../assets/images/project_urban_heights_1791342468221.jpg';
-import commercialImg from '../assets/images/project_commercial_nexus_1791342524880.jpg';
-import kothiImg from '../assets/images/project_kailash_meena_kothi_1791342552714.jpg';
-import schoolImg from '../assets/images/project_institutional_campus_1791342565210.jpg';
-import stage3Img from '../assets/images/building_stage3_architecture_1791342397917.jpg';
-import stage4Img from '../assets/images/building_stage4_finishing_1791342412580.jpg';
-import stage5Img from '../assets/images/building_stage5_completed_1791342426062.jpg';
+import urbanHeightsImg from '../assets/images/Urban Heights Apartments.png';
+import lakshyaTowersImg from '../assets/images/Lakshya Tower.png';
+import shakunMarvelImg from '../assets/images/Shakun Marvel.png';
+import westsideRetailImg from '../assets/images/Westside Retail.png';
+import sukhmaniApartmentsImg from '../assets/images/Sukhmani Apartments.png';
+import fortuneElitaImg from '../assets/images/Fortune Elita.png';
+import bbvImg from '../assets/images/BBV.png';
+import hyundaiShowroomImg from '../assets/images/Hyundai Showroom.png';
+import nexusImg from '../assets/images/The Nexus.png';
+import kailashMeenaKothiImg from '../assets/images/Kailash Meena Khoti.png';
 
 interface ProjectsSectionProps {
   locationFilter: string;
@@ -49,7 +52,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'completed',
     shortDesc: 'Landmark residential apartment complex situated on prime Ek Number Road with spacious floor layouts and resilient concrete construction.',
     fullDesc: 'Located on Ek Number Road, LAKSHYA TOWERS represents a benchmark in urban residential housing in Kota. Built with attention to structural longevity, natural cross-ventilation, and durable finishings that have stood the test of time.',
-    image: stage3Img,
+    image: lakshyaTowersImg,
     scope: [
       'Turnkey civil structural framework',
       'Brick masonry & precision plastering',
@@ -62,28 +65,30 @@ export const PROJECTS_DATA: ProjectData[] = [
       { label: 'Status', value: 'Fully Occupied & Delivered' },
     ],
   },
-  {
-    id: 'shakun-marvel',
-    name: 'Shakun Marvel',
-    location: 'Dhan Mandi, Kota',
-    category: 'commercial',
-    status: 'completed',
-    clientOrAssociation: 'Associated with Pandey Group',
-    shortDesc: 'Premier commercial and trading complex in the bustling trade district of Dhan Mandi, engineered for heavy commercial loads.',
-    fullDesc: 'Executed in collaboration with the renowned Pandey Group, Shakun Marvel is a marquee commercial shopping and trade hub in Dhan Mandi, Kota. The building incorporates wide commercial column grids, heavy-load floor slabs, and high-efficiency circulation paths.',
-    image: commercialImg,
-    scope: [
-      'Commercial grade high-strength concrete pours',
-      'Post-tensioned beam grid for open shop layouts',
-      'Heavy-duty commercial fire-exit staircases',
-      'Dhan Mandi site logistics & tight-quarter execution',
-    ],
-    specs: [
-      { label: 'Associated Partner', value: 'Pandey Group' },
-      { label: 'Location', value: 'Dhan Mandi, Kota' },
-      { label: 'Use Case', value: 'Commercial Retail Hub' },
-    ],
-  },
+{
+  id: 'shakun-marvel',
+  name: 'Shakun Marvel',
+  location: 'Dhan Mandi, Kota',
+  category: 'residential',
+  status: 'completed',
+  clientOrAssociation: 'Associated with Pandey Group',
+  shortDesc:
+    'Premier residential apartment development in Dhan Mandi, Kota, featuring contemporary architecture, spacious living spaces, and durable structural construction.',
+  fullDesc:
+    'Executed in collaboration with the renowned Pandey Group in Dhan Mandi, Kota, Shakun Marvel is a residential apartment development focused on comfortable urban living, structural durability, and contemporary architectural design. Prachi Constructions delivered the civil and structural execution with attention to long-term performance, quality workmanship, and refined residential finishes.',
+  image: shakunMarvelImg,
+  scope: [
+    'RCC structural frame and foundation execution',
+    'Brick masonry and precision plastering',
+    'Residential plumbing and electrical conduit works',
+    'Terrace waterproofing and exterior finishing',
+  ],
+  specs: [
+    { label: 'Project Type', value: 'Residential Apartments' },
+    { label: 'Associated Partner', value: 'Pandey Group' },
+    { label: 'Location', value: 'Dhan Mandi, Kota' },
+  ],
+},
   {
     id: 'west-side-kota',
     name: 'West Side Kota',
@@ -92,7 +97,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'completed',
     shortDesc: 'Commercial retail fashion and lifestyle store designed for a modern and engaging shopping experience.',
     fullDesc: 'West Side Kota is a commercial retail fashion and lifestyle store developed with a focus on modern retail functionality, quality civil execution, and a customer-oriented shopping environment.',
-    image: commercialImg,
+    image: westsideRetailImg,
     scope: [
       'Commercial civil structural execution',
       'Retail space development',
@@ -113,7 +118,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'completed',
     shortDesc: 'Refined contemporary family apartments in Bajrang Nagar with premium stone accents and structural durability.',
     fullDesc: 'Sukhmani Apartment in Bajrang Nagar was executed with a focus on modern aesthetic sensibilities and peaceful residential living. Prachi Constructions oversaw full structural execution, exterior weather-resistant coatings, and high-end residential common areas.',
-    image: stage4Img,
+    image: sukhmaniApartmentsImg,
     scope: [
       'RCC framed superstructure & shear walls',
       'High-grade exterior plaster & waterproofing',
@@ -134,7 +139,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'completed',
     shortDesc: 'Prestigious residential development in the upscale enclave of R.K. Puram, boasting sleek cantilevered balconies and luxury finishes.',
     fullDesc: 'Situated in the elite neighborhood of R.K. Puram, Kota, Fortune Elita showcases modern luxury multi-family living. The project features clean geometric facades, floor-to-ceiling glass balconies, and robust civil works executed to the highest specifications.',
-    image: stage5Img,
+    image: fortuneElitaImg,
     scope: [
       'Complex architectural cantilevers & pergolas',
       'Deep foundation with specialized soil stabilization',
@@ -155,7 +160,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'completed',
     shortDesc: 'Extensive educational campus building with high-capacity classrooms, wide corridors, and safe student recreational courtyards.',
     fullDesc: 'Bhuvnesh Bal Vidyalaya is a cornerstone educational institution in Kota. Prachi Constructions delivered the campus civil infrastructure with strict adherence to institutional building codes, wide fire-safe corridors, child-friendly staircases, and durable low-maintenance materials.',
-    image: schoolImg,
+    image:  bbvImg,
     scope: [
       'Institutional multi-wing classroom blocks',
       'Wide central assembly courtyard & pavers',
@@ -176,7 +181,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'ongoing',
     shortDesc: 'New & Old Showroom Projects — expansive automotive retail showrooms featuring double-height glass facades and modern workshop bays.',
     fullDesc: 'Prachi Constructions is associated with both the New and Old Hyundai Showroom projects in Kota. These high-visibility automotive dealerships require precision flat floors for vehicle display, wide unobstructed spans for service bays, and sleek modern corporate branding architecture.',
-    image: commercialImg,
+    image:  hyundaiShowroomImg,
     scope: [
       'Double-height structural steel & RCC framing',
       'Super-flat industrial floor slab for car displays',
@@ -197,7 +202,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'ongoing',
     shortDesc: 'A premier upcoming commercial center near Ortus Hotel, delivering high-end retail spaces and contemporary corporate offices.',
     fullDesc: 'Located strategically near Ortus Hotel in Kota, The Nexus is set to be one of the city’s premier commercial shopping and office destinations. Prachi Constructions is managing the civil structural execution, expansive multi-level retail floor slabs, and modern glass facade engineering.',
-    image: commercialImg,
+    image: nexusImg,
     scope: [
       'Multi-level commercial structure near Ortus Hotel',
       'High-ceiling retail show-windows',
@@ -218,7 +223,7 @@ export const PROJECTS_DATA: ProjectData[] = [
     status: 'ongoing',
     shortDesc: 'Currently Under Execution — A grand luxury private residence kothi blending traditional Rajasthani stone craftsmanship with contemporary villa architecture.',
     fullDesc: 'Currently under active execution in Bijoliya, the Kailash Meena Kothi is a magnificent private estate residence. Blending regional stone carving heritage with cutting-edge reinforced concrete engineering, expansive courtyards, luxury verandas, and panoramic architectural terraces.',
-    image: kothiImg,
+    image: kailashMeenaKothiImg,
     scope: [
       'Custom luxury kothi private estate execution',
       'Master stone masonry integration (Bijoliya stone)',

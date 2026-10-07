@@ -91,9 +91,9 @@ export const ExperienceStats: React.FC<ExperienceStatsProps> = ({
                 onChange={(e) => onCategoryChange(e.target.value)}
                 className="bg-transparent text-xs sm:text-sm text-white font-bold focus:outline-none cursor-pointer"
               >
-                <option value="all" className="bg-[#181d31] text-[#C0C9DB] font-medium">All Categories (9 Projects)</option>
+                <option value="all" className="bg-[#181d31] text-[#C0C9DB] font-medium">All Categories (10 Projects)</option>
                 <option value="residential" className="bg-[#181d31] text-[#C0C9DB] font-medium">Residential (5 Projects)</option>
-                <option value="commercial" className="bg-[#181d31] text-[#C0C9DB] font-medium">Commercial (3 Projects)</option>
+                <option value="commercial" className="bg-[#181d31] text-[#C0C9DB] font-medium">Commercial (4 Projects)</option>
                 <option value="institutional" className="bg-[#181d31] text-[#C0C9DB] font-medium">Institutional (1 Project)</option>
               </select>
             </div>

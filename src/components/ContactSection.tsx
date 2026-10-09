@@ -36,14 +36,32 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
     }
   }, [prefilledType, prefilledCost]);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 700);
-  };
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const response = await fetch('https://formspree.io/f/meaegnke', {
+      method: 'POST',
+      body: new FormData(e.currentTarget),
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Enquiry could not be sent.');
+    }
+
+    setIsSubmitted(true);
+  } catch (error) {
+    alert(
+      'Your enquiry could not be sent. Please call +91 9214321354.'
+    );
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section id="contact" className="relative bg-[#090f0d] py-24 px-6 md:px-12 border-b border-neutral-800/80">
@@ -201,6 +219,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       </label>
                       <input
                         type="text"
+                        name="name"
                         required
                         placeholder="e.g. Ramesh Sharma"
                         value={formData.name}
@@ -216,6 +235,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       </label>
                       <input
                         type="tel"
+                        name="phone"
                         required
                         placeholder="e.g. +91 98290 XXXXX"
                         value={formData.phone}
@@ -233,6 +253,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       </label>
                       <input
                         type="email"
+                        name="email"
                         placeholder="e.g. ramesh@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -246,6 +267,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                         Project Category *
                       </label>
                       <select
+                        name="projectType"
                         value={formData.projectType}
                         onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-[#202742] border border-[#384C65] text-white text-xs focus:outline-none focus:border-[#485F88] transition-colors cursor-pointer font-medium"
@@ -266,6 +288,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     </label>
                     <input
                       type="text"
+                      name="locationArea"
                       placeholder="e.g. Kota (R.K. Puram / Dhan Mandi / Bajrang Nagar) or Bijoliya"
                       value={formData.locationArea}
                       onChange={(e) => setFormData({ ...formData, locationArea: e.target.value })}
@@ -279,6 +302,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                       Project Scope & Message
                     </label>
                     <textarea
+                      name="message"
                       rows={4}
                       placeholder="Share estimated built-up area, architectural stage, or site location..."
                       value={formData.message}
